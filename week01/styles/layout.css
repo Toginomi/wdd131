@@ -28,17 +28,16 @@ header nav ul li a {
 }
 
 .content {
-    display: flex;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
 }
 
 main {
-    flex: 3;
     background-color: #ccc;
     padding: 20px;
 }
 
 aside {
-    flex: 1;
     background-color: white;
     padding: 20px;
 }
