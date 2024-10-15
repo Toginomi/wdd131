@@ -1,0 +1,18 @@
+@media (min-width: 768px) {
+    .menu {
+        display: flex;
+        flex-flow: row;
+        justify-content: right;
+        top: 0;
+        border: none;
+        background: none;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
