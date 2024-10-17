@@ -1,6 +1,6 @@
-@media (max-width: 780px) {
+@media (min-width: 600px) {
     .hero-image {
-        max-width: 800px;
+        max-width: 600px;
     }
 }
 
@@ -26,6 +26,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+
 }
 
 header {
@@ -49,24 +50,16 @@ header {
     max-width: 100%;
 }
 
-.data-section {
-    width: 100%;
-    max-width: 400px;
-    margin: 20px auto;
-    background-color: white;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    text-align: center;
-}
-
+.data-section,
 .weather-section {
     width: 100%;
-    max-width: 400px;
+    max-width: 300px;
     margin: 20px auto;
-    background-color: white;
+    background-color: var(--background-color);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding: 20px;
     text-align: center;
+    opacity: 90%;
 }
 
 .data-section h2,

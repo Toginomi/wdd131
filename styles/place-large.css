@@ -1,4 +1,4 @@
-@media (min-width: 780px) {
+@media (min-width: 600px) {
     .hero-image {
         max-width: 1200px;
     }
@@ -12,13 +12,9 @@
 
     .data-section,
     .weather-section {
-        background-color: white;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        opacity: 90%;
-        max-width: 300px;
-        margin: 10px;
         position: absolute;
         border-radius: 10px;
+        max-width: 250px;
     }
 
     .data-section {
@@ -27,8 +23,9 @@
     }
 
     .weather-section {
-        top: -340px;
-        left: 760px;
+        top: -475px;
+        right: 20px;
     }
+
 
 }
