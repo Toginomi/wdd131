@@ -21,75 +21,75 @@
     </header>
     <main>
         <section class="image-section">
-            <img class="hero-image" src="images/mayon-volcano.webp" srcset="
-                     images/mayon-volcano.webp 480w,
-                     images/san-juanico-bridge.webp 1200w
-                 " sizes="(max-width: 480px) 480px, 
-                        (max-width: 1200px) 100vw, 
-                        1200px" alt="Landmarks in the Philippines">
+            <picture>
+                <source srcset="images/san-juanico-bridge.webp" media="(min-width: 600px)">
+                <img class="hero-image" src="images/mayon-volcano.webp" alt="Landmarks in the Philippines">
+            </picture>
         </section>
 
+        <div class="main-content">
+            <section class="data-section">
+                <h2>Data</h2>
+                <table>
+                    <tr>
+                        <td class="label">Area:</td>
+                        <td class="value">300,000 sq km</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Population:</td>
+                        <td class="value">109,581,078</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Capital:</td>
+                        <td class="value">Manila</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Languages:</td>
+                        <td class="value">Filipino, English</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Currency:</td>
+                        <td class="value">Philippine Peso</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Time Zone:</td>
+                        <td class="value">UTC+8</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Calling Code:</td>
+                        <td class="value">+63</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Internet TLD:</td>
+                        <td class="value">.ph</td>
+                    </tr>
+                </table>
+            </section>
 
-        <section class="data-section">
-            <h2>Data</h2>
-            <table>
-                <tr>
-                    <td class="label">Area:</td>
-                    <td class="value">300,000 sq km</td>
-                </tr>
-                <tr>
-                    <td class="label">Population:</td>
-                    <td class="value">109,581,078</td>
-                </tr>
-                <tr>
-                    <td class="label">Capital:</td>
-                    <td class="value">Manila</td>
-                </tr>
-                <tr>
-                    <td class="label">Languages:</td>
-                    <td class="value">Filipino, English</td>
-                </tr>
-                <tr>
-                    <td class="label">Currency:</td>
-                    <td class="value">Philippine Peso</td>
-                </tr>
-                <tr>
-                    <td class="label">Time Zone:</td>
-                    <td class="value">UTC+8</td>
-                </tr>
-                <tr>
-                    <td class="label">Calling Code:</td>
-                    <td class="value">+63</td>
-                </tr>
-                <tr>
-                    <td class="label">Internet TLD:</td>
-                    <td class="value">.ph</td>
-                </tr>
-            </table>
-        </section>
+            <section class="weather-section">
+                <h2>Weather</h2>
+                <img src="images/weather-icon.svg" alt="Weather Icon" class="weather-icon">
+                <table>
+                    <tr>
+                        <td class="label">Temperature:</td>
+                        <td class="value">30°C</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Conditions:</td>
+                        <td class="value">Mostly Cloudy</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Wind:</td>
+                        <td class="value">10 km/h</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Wind Chill:</td>
+                        <td class="value">29.5°C</td>
+                    </tr>
+                </table>
+            </section>
+        </div>
 
-        <section class="weather-section">
-            <h2>Weather</h2>
-            <img src="images/weather-icon.svg" alt="Weather Icon" class="weather-icon">
-            <table>
-                <tr>
-                    <td class="label">Temperature:</td>
-                    <td class="value">30°C</td>
-                </tr>
-                <tr>
-                    <td class="label">Conditions:</td>
-                    <td class="value">Mostly Cloudy</td>
-                </tr>
-                <tr>
-                    <td class="label">Wind:</td>
-                    <td class="value">10 km/h</td>
-                </tr>
-                <tr>
-                    <td class="label">Wind Chill:</td>
-                    <td class="value">29.5°C</td>
-                </tr>
-            </table>
-        </section>
     </main>
     <footer>
         <p>&copy;<span id="currentyear"></span> | Rudy Pilande II | Philippines</p>
