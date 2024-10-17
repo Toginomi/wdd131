@@ -1,13 +1,124 @@
-/* Important: You are responsible to implement
-good design principles of alignment,
-color contrast, proximity, repetition,
-and usability in all of your work.
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-1. Select a color schema that supports the country or place
-For example, the provided screenshots above use the official colors of the flag of Madagascar.
+:root {
+    --primary-color: #0038A8;
+    --secondary-color: #CE1126;
+    --accent-color: #FFD700;
+    --background-color: #f4f4f4;
+    --text-color: #333333;
+}
 
-2. The typography choice is up to you.
-3. The minimum styling requirements include:
- - Matching the layouts shown in the wireframes.
- - Using a media query or queries. Using global CSS variables.
- - Using a pseudo element for the weather icon in the large view located after the heading "Weather" . */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 1.5em;
+}
+
+.image-section {
+    width: 100%;
+    text-align: center;
+    background-color: var(--secondary-color);
+    padding: 20px;
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    max-width: 480px;
+}
+
+.data-section {
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+.weather-section {
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+.weather-section h2 {
+    font-size: 1em;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+@media (min-width: 1200px) {
+    .weather-section h2::before {
+        content: url('images/weather-icon.svg');
+        display: inline-block;
+        margin-right: 10px;
+        vertical-align: middle;
+    }
+}
+
+.weather-icon {
+    width: 60px;
+    height: 60px;
+    margin: 10px auto;
+}
+
+table {
+    width: 100%;
+    margin: 10px 0;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 4px;
+}
+
+td.label {
+    text-align: right;
+    font-weight: bold;
+    color: var(--primary-color);
+    font-size: 0.75rem;
+}
+
+td.value {
+    text-align: left;
+    color: #555;
+    font-size: 0.75rem;
+}
+
+footer {
+    background-color: var(--secondary-color);
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+    font-size: 0.9em;
+}
+
+footer p {
+    margin: 5px 0;
+}

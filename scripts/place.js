@@ -1,36 +1,44 @@
-/*
-1. The footer of the page must include the current year
-and the date the document was last modified just like
-the other assignments to date. You can copy that material
-into this page and either use the existing JavaScript file
-or use your page specific JavaScript file to support this
-page's footer.
+function updateFooter() {
+    const currentYear = new Date().getFullYear();
+    const lastModified = document.lastModified;
 
-2. In your JavaScript file, provide the code to support
-the following requirements:
+    document.getElementById('currentyear').textContent = currentYear;
+    document.getElementById('lastModified').textContent = `Last modified: ${lastModified}`;
+}
 
-- Use JavaScript to display the windchill factor in the "Weather" section
-of the page as shown in the examples. The windchill factor should be
-calculated and displayed when the page loads.
-- At this point in the course, go ahead and define variables that use
-static values for the temperature and wind speed, matching the static,
-displayed values you have in your weather section content. The next
-course will cover how to use third-party APIs to get real-time
-weather data.
-- Write a function named "calculateWindChill" that returns the
-windchill factor when passed the appropriate arguments
-(temperature and wind speed). The function should use one line
-of code that returns the result of the calculation of the wind.
-Of course, your formula should be based upon the location's preference
-of units (°C or °F). Using AI to help determine this formula might be
-a good approach.
-- Do not call the calculateWindChill function unless the
-conditions are met which are as follows:
-    Viable Wind Chill Calculations
-                    Metric	Imperial (English)
-    Temperature	<= 10 °C	<= 50 °F
-    Wind speed	> 4.8 km/h	> 3 mph
-If the conditions are not met, then display "N/A",
-which means not applicable. Of course, your code is using static
-inputs, nonetheless, your code should have this provision
-coded in preparation for dynamic, real-time inputs. */
+function celsiusToFahrenheit(celsius) {
+    return (celsius * 9 / 5) + 32;
+}
+
+function fahrenheitToCelsius(fahrenheit) {
+    return (fahrenheit - 32) * 5 / 9;
+}
+
+function calculateWindChill(temperature, windSpeed) {
+    const temperatureInFahrenheit = celsiusToFahrenheit(temperature);
+    const windChillInFahrenheit = 35.74 + 0.6215 * temperatureInFahrenheit - 35.75 * (windSpeed ** 0.16) + 0.4275 * temperatureInFahrenheit * (windSpeed ** 0.16);
+    const windChillInCelsius = fahrenheitToCelsius(windChillInFahrenheit);
+
+    return Math.round(windChillInCelsius * 10) / 10;
+}
+
+function displayWindChill() {
+    const temperature = 30;
+    const windSpeed = 5;
+
+    let windChill;
+
+    if (temperature <= 10 && windSpeed > 4.8) {
+        windChill = calculateWindChill(temperature, windSpeed) + "°C";
+    } else {
+        windChill = "N/A";
+    }
+
+    const windChillElement = document.querySelectorAll('.weather-section .value')[3];
+    windChillElement.textContent = windChill;
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    updateFooter();
+    displayWindChill();
+});
