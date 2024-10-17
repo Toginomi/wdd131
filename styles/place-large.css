@@ -14,6 +14,7 @@
     .weather-section {
         position: absolute;
         border-radius: 10px;
+        max-width: 250px;
     }
 
     .data-section {
