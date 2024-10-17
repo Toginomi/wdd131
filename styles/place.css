@@ -54,7 +54,7 @@ header {
 .weather-section {
     width: 100%;
     max-width: 300px;
-    margin: 20px auto;
+    margin: 0;
     background-color: var(--background-color);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding: 20px;
