@@ -56,7 +56,6 @@ header {
     margin: 0;
     background-color: var(--background-color);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 20px;
     text-align: center;
     opacity: 90%;
 }
@@ -64,7 +63,7 @@ header {
 .data-section h2,
 .weather-section h2 {
     font-size: 1em;
-    margin-bottom: 10px;
+    margin-top: 10px;
     color: var(--primary-color);
 }
 
