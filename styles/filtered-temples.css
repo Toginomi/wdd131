@@ -58,7 +58,9 @@ h1 {
 }
 
 main {
-    padding: 20px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
 }
 
 h2 {
@@ -68,16 +70,20 @@ h2 {
 .gallery {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 10px;
+    gap: 30px;
 }
 
-figure {
+.temple-card {
     text-align: center;
+    background-color: #ebeaea;
+    border-radius: 10px;
+    padding-bottom: 10px;
 }
 
-main figure img {
-    max-width: 60%;
+.temple-card span {
+    color: #4a0072;
 }
+
 
 footer {
     text-align: center;
