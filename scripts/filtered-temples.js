@@ -5,6 +5,7 @@ hamburger.addEventListener('click', () => {
   menu.classList.toggle('show');
 
   if (menu.classList.contains('show')) {
+    hamburger.textContent = 'X';
   }
 
   else {
