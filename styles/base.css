@@ -1,19 +1,30 @@
 body {
+    font-family: "Roboto", sans-serif;
     margin: 0;
-    background-color: #333;
+    background-color: #ffffff;
 }
 
 header {
-    color: white;
+    background-color: #1d4d72;
+    color: #e7ead0;
+    text-align: center;
+    font-weight: 400;
+    font-size: x-large;
+}
+
+header span{
+    display: block;
+    padding: 5px;
 }
 
 header nav ul {
     list-style-type: none;
-    padding: 15px;
+    padding: 10px;
     margin: 0;
     display: flex;
     justify-content: space-around;
-    background-color: #000;
+    background-color: #333333;
+    font-size: small;
 }
 
 header nav ul li {
@@ -25,38 +36,6 @@ header nav ul li a {
     text-decoration: none;
 }
 
-main {
-    max-width: 1200px;
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-}
-
-h1,
-#about-me h2,
-h3 {
-    text-align: center;
-}
-
-#about-me {
-    background-color: #ccc;
-    padding: 20px;
-}
-
-p {
-    margin: 10px;
-}
-
-#about-me-content,
-#country-content {
-    display: flex;
-    padding: 10px;
-}
-
-#web-dev-resources {
-    background-color: white;
-    padding: 20px;
-}
-
 nav a {
     text-decoration: none;
     color: #333;
@@ -66,13 +45,81 @@ nav a {
 
 nav a:hover {
     color: #fff;
-    background-color: #007BFF;
-    border-radius: 5px;
+    text-decoration: underline;
+}
+
+main {
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas:
+        "title title"
+        "about resources";
+}
+
+main h1 {
+    grid-area: title;
+    font-weight: 500;
+    font-size: x-large;
+    text-align: center;
+    margin: 0;
+}
+
+.card {
+    border-radius: 10px; 
+    font-size: small;
+    margin-top: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+h2{
+    background-color: #1d4d72;
+    font-size: small;
+    color: #e7ead0;
+    padding: 5px;
+    text-align: center;
+    top: 0;
+    margin: 0;
+    border-radius: 10px 10px 0 0; 
+}
+
+h3{
+    text-align: center;
+    font-size: small;
+    width: 30%;
+    margin: 20px auto;            
+    border-bottom: 1px solid;
+    padding-bottom: 5px;
+}
+
+#about-me {
+    grid-area: about;
+}
+
+#web-dev-resources {
+    grid-area: resources;
+}
+
+#about-me-content,
+#country-content {
+    display: flex;
+    padding: 10px;
+    gap: 15px;
 }
 
 footer {
-    background-color: #333;
+    background-color: #1d4d72;
     color: white;
     text-align: center;
     padding: 10px;
+    font-size: x-small;
+}
+
+footer #copyright {
+    font-size: larger;
+}
+
+footer #lastModified {
+    color: #fced3e;
 }
