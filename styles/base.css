@@ -124,3 +124,29 @@ footer #copyright {
 footer #lastModified {
     color: #fced3e;
 }
+
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "title"
+            "about"
+            "resources";
+        padding: 10px;
+    }
+
+    #about-me-content,
+    #country-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+}
