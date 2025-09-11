@@ -125,7 +125,7 @@ footer #lastModified {
     color: #fced3e;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     main {
         grid-template-columns: 1fr;
         grid-template-areas:
