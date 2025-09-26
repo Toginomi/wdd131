@@ -5,10 +5,9 @@ hamburger.addEventListener('click', () => {
     menu.classList.toggle('show');
 
     if (menu.classList.contains('show')) {
-    }
-
-    else {
-        hamburger.textContent = '☰';
+        hamburger.textContent = '✖'; // change burger to X when open
+    } else {
+        hamburger.textContent = '☰'; // revert to burger when closed
     }
 });
 
