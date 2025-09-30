@@ -37,7 +37,6 @@
     }
 
     .weather-section h2::after {
-        content: url('images/weather-icon.svg');
         display: inline-block;
         margin-left: -50px;
         width: 50px;
