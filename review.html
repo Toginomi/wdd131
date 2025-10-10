@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Review Submitted</title>
+  <meta name="description" content="Review Confirmation">
+  <meta name="author" content="Rudy F. Pilande II">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/form.css">
+  <link rel="stylesheet" href="styles/form-large.css">
+  <script src="scripts/getdates.js" defer></script>
+  <style>
+    main {
+      max-width: 600px;
+      margin: 2rem auto;
+      padding: 1rem;
+      border-radius: 10px;
+      background: #f9f9f9;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      font-family: 'Roboto', sans-serif;
+    }
+    .review-item {
+      margin-bottom: 1rem;
+    }
+    .review-item strong {
+      display: inline-block;
+      width: 150px;
+      color: #333;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Thank You for Your Review!</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>Here’s what you submitted:</h2>
+      <div id="review-details"></div>
+      <a href="index.html">← Back to Home</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy;<span id="currentyear"></span> | Rudy Pilande II | Philippines</p>
+    <p id="lastModified"></p>
+  </footer>
+
+  <script>
+    // Get query string params
+    const params = new URLSearchParams(window.location.search);
+
+    // Map values to readable labels
+    const reviewData = {
+      "Product Name": params.get("productName"),
+      "Rating": params.get("rating") ? params.get("rating") + " / 5" : null,
+      "Install Date": params.get("installDate"),
+      "Features": params.getAll("features").join(", "),
+      "Written Review": params.get("reviewText"),
+      "Name": params.get("userName")
+    };
+
+    // Display values
+    const container = document.getElementById("review-details");
+    for (let key in reviewData) {
+      if (reviewData[key]) { // only show if value exists
+        const div = document.createElement("div");
+        div.classList.add("review-item");
+        div.innerHTML = `<strong>${key}:</strong> ${reviewData[key]}`;
+        container.appendChild(div);
+      }
+    }
+  </script>
+</body>
+
+</html>
