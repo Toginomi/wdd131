@@ -4,77 +4,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="The Young Scholar Site Plan">
+    <meta name="description" content="The Young Scholar Home Page">
     <meta name="author" content="Rudy F. Pilande II">
-
-    <title>The Young Scholar - Site Plan</title>
+    <title>The Young Scholar</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@400;600&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
 
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/siteplan.css">
+    <script defer src="scripts/nav.js"></script>
 </head>
 
 <body>
     <header>
         <div class="logo">
-            <img src="images/tys-logo.png" alt="The Young Scholar Logo">
+            <img src="images/tys-logo.png" alt="logo-image" width="100">
             <div class="logo-text">
                 <span class="logo-text-top">The Young Scholar</span>
-                <span>Nurturing Pisay Scholars</span>
             </div>
         </div>
-        <button id="hamburger" aria-label="navigation">☰</button>
+        <button id="hamburger" aria-label="Toggle navigation" aria-controls="nav" aria-expanded="false">☰</button>
+        <nav id="nav">
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="our-mentors.html">Our Mentors</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <nav>
-        <ul class="nav-links">
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="siteplan.html">Site Plan</a></li>
-            <li><a href="tutors.html">Tutors</a></li>
-            <li><a href="register.html">Register</a></li>
-        </ul>
-    </nav>
-
     <main>
-        <section>
-            <h1>Site Plan</h1>
-            <p>This site plan outlines the purpose, audience, design, and structure for The Young Scholar website.</p>
-        </section>
-
-        <section>
-            <h2>Purpose</h2>
-            <p>To provide accessible, high-quality preparation for the Philippine Science High School NCE through
-                experienced mentors and affordable review sessions.</p>
-        </section>
-
-        <section>
-            <h2>Target Audience</h2>
-            <p>Elementary students aspiring to enter Pisay, along with their supportive parents and guardians.</p>
-        </section>
-
-        <section>
-            <h2>Wireframes</h2>
-            <div id="wireframe-images">
-                <figure>
-                    <img src="images/wireframe-home.png" alt="Homepage Wireframe">
-                    <figcaption>Homepage</figcaption>
-                </figure>
-                <figure>
-                    <img src="images/wireframe-tutors.png" alt="Tutors Wireframe">
-                    <figcaption>Tutors Page</figcaption>
-                </figure>
+        <div class="hero">
+            <img src="images/hero-image.webp" alt="Hero Image" class="hero-image" loading="lazy">
+            <div class="hero-text">
+                <h1>Wanna become Pisay ready?</h1>
+                <p>TYS helps.</p>
+                <button class="btn">Join our Class</button>
             </div>
-        </section>
+        </div>
+
+        <div id="tys-details">
+            <div class="about-us">
+                <h2>What we do</h2>
+                <p>
+                    TYS provides comprehensive preparation for the Philippine Science High School National
+                    Competitive Exam (NCE). Our programs cover all key areas of the NCE, including in-depth review of
+                    math, science, verbal aptitude, and logical reasoning, along with proven test-taking strategies,
+                    practice exams, and personalized feedback from experienced instructors. We aim to unlock each
+                    student's full potential and guide them on the path to Pisay success.
+                </p>
+                <a href="about-us.html" class="expand-details">More about us</a>
+            </div>
+
+            <div class="our-mentors">
+                <h2>Who we are</h2>
+
+                <div class="mentor-grid">
+                    <div class="mentor-card">
+                        <img src="images/mentor-drew.jpg" alt="Chris Andrew Mendoza">
+                        <p class="mentor-name">Drew</p>
+                        <p class="mentor-role">Founder, CEO</p>
+                    </div>
+
+                    <div class="mentor-card">
+                        <img src="images/mentor-zoe.jpg" alt="Zoe Pasiliao">
+                        <p class="mentor-name">Zoe</p>
+                        <p class="mentor-role">Co-Founder</p>
+                    </div>
+
+                    <div class="mentor-card">
+                        <img src="images/mentor-rudy.jpg" alt="Rudy Pilande II">
+                        <p class="mentor-name">Rudy</p>
+                        <p class="mentor-role">Co-Founder</p>
+                    </div>
+                </div>
+
+                <a href="our-mentors.html" class="expand-details">View all mentors</a>
+            </div>
+        </div>
     </main>
 
     <footer>
-        <p>&copy; 2025 The Young Scholar. All rights reserved.</p>
+        <div class="socials">
+            <ul>
+                <li>
+                    <a href="https://www.facebook.com/togiii.p" target="_blank" rel="noopener" aria-label="Facebook">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 320 512">
+                            <path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S255.77 0 225.36 0c-73.42 0-121.36 44.38-121.36 124.72v70.62H64v92.66h39.98v224h96.17v-224z"/>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.twitter.com" target="_blank" rel="noopener" aria-label="Twitter">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512">
+                            <path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.421-84.143-51.98-84.143-103.197v-1.299c14.182 7.89 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.182-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.78-2.599-15.89-2.599-24.009 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.505 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.78 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/rudy-ii-pilande/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 448 512">
+                            <path d="M100.28 448H7.4V165.48h92.88zm-46.44-317A53.61 53.61 0 1 1 107.45 53.6 53.61 53.61 0 0 1 53.84 131zm447.66 317h-92.7V302.4c0-34.7-12.39-58.3-43.29-58.3-23.6 0-37.6 15.89-43.79 31.2-2.24 5.4-2.8 12.9-2.8 20.5V448h-92.7s1.2-251.3 0-277.5h92.7v39.3c-.2.3-.5.7-.7 1h.7v-1c12.3-19 34.4-46.2 83.5-46.2 60.9 0 106.6 39.8 106.6 125.4V448z"/>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div id="copyright">
+            <p>&copy;2025 The Young Scholar. All rights reserved.</p>
+        </div>
     </footer>
+
 </body>
 
 </html>

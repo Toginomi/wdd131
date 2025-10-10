@@ -1,0 +1,365 @@
+/* ------------------------------
+   Root Variables
+------------------------------ */
+:root {
+    --primary-color: #1b2752;   /* deep navy */
+    --secondary-color: #ff914d; /* bright orange */
+    --accent1-color: #ffffff;   /* white */
+    --accent2-color: #acbfc4;   /* muted gray */
+}
+
+/* ------------------------------
+   Base Styles
+------------------------------ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: var(--accent1-color);
+    color: #000000;
+}
+
+/* ------------------------------
+   Header & Navigation
+------------------------------ */
+header {
+    background-color: var(--primary-color);
+    color: var(--accent1-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    position: relative;
+    flex-wrap: wrap;
+    z-index: 5;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo img {
+    width: 60px;
+    height: 60px;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+}
+
+.logo-text-top {
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+}
+
+/* Hamburger button */
+#hamburger {
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    color: var(--accent1-color);
+    cursor: pointer;
+    z-index: 10;
+}
+
+
+
+/* Nav Styles */
+nav {
+    background-color: var(--primary-color);
+    width: 100%;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+
+.nav-links.show {
+    max-height: 500px; /* or a value large enough to show all links */
+}
+
+.nav-links li {
+    border-top: 1px solid var(--accent2-color);
+}
+
+.nav-links a {
+    color: var(--accent1-color);
+    text-decoration: none;
+    padding: 0.6rem;
+    display: block;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--secondary-color);
+}
+
+.nav-links a.active {
+    text-decoration: underline;
+    text-decoration-color: var(--secondary-color);
+    text-underline-offset: 6px;
+}
+
+/* ------------------------------
+   Hero Section
+------------------------------ */
+.hero {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.hero-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--accent1-color);
+    text-align: center;
+    background: rgba(27, 39, 82, 0.6);
+    padding: 1.5rem;
+    border-radius: 8px;
+    width: 90%;
+}
+
+.hero-text h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem;
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+.hero-text p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.btn {
+    background-color: var(--secondary-color);
+    color: #000000;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #ff7a1a;
+    transform: translateY(-2px);
+}
+
+/* ------------------------------
+   Main Content
+------------------------------ */
+main {
+    padding: 1.5rem;
+}
+
+#tys-details {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    gap: 2rem;
+}
+
+/* ------------------------------
+   Mentor Section
+------------------------------ */
+.mentor-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+.mentor-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--accent1-color);
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    width: 100%;
+    max-width: 200px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.mentor-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 0.5rem;
+}
+
+.mentor-name {
+    font-weight: bold;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+.mentor-role {
+    color: #000000;
+    font-style: italic;
+    margin: 0.3rem 0 0.8rem 0;
+}
+
+/* ------------------------------
+   About Us and Our Mentors Section
+------------------------------ */
+.about-us,
+.our-mentors {
+    background-color: var(--accent1-color);
+    padding: 1.5rem;
+    border: 1px solid var(--accent2-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+}
+
+h1, h2 {
+    font-family: 'Poppins', sans-serif;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--accent2-color);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    margin-right: auto;
+}
+
+.expand-details {
+    display: inline-block;
+    margin-top: 1rem;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: auto;
+}
+
+.expand-details:hover {
+    text-decoration: underline;
+}
+
+/* ------------------------------
+   Footer
+------------------------------ */
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: var(--primary-color);
+    color: var(--accent1-color);
+    text-align: center;
+    margin-top: 1rem;
+    padding: 1rem 10px;
+    border-radius: 0 0 8px 8px;
+}
+
+.socials ul {
+    display: flex;
+    list-style: none;
+    margin: 1rem 0;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.socials a {
+    fill: #ffffff;
+}
+
+footer #copyright {
+    font-size: 0.9rem;
+}
+
+/* ------------------------------
+   Desktop View (min-width: 768px)
+------------------------------ */
+@media (min-width: 768px) {
+    header {
+        padding: 1rem 2rem;
+    }
+
+    #hamburger {
+        display: none;
+    }
+
+    nav {
+        width: auto;
+        background: none;
+    }
+
+    .nav-links {
+        display: flex !important;
+        flex-direction: row;
+        gap: 2rem;
+        max-height: none;
+        overflow: visible;
+    }
+
+    .nav-links li {
+        border: none;
+    }
+
+    .hero-image {
+        height: 500px;
+    }
+
+    .hero-text {
+        font-size: 1.2rem;
+        padding: 2rem 3rem;
+    }
+
+    #tys-details {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .mentor-card {
+        flex: 1 1 200px;
+    }
+
+    .about-us,
+    .our-mentors {
+        flex: 0 0 48%;
+        margin: 0;
+    }
+
+    .mentor-grid {
+        justify-content: center;
+    }
+
+    #contact {
+        margin: 1rem;
+    }
+}
+

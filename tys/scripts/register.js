@@ -1,1 +1,0 @@
-document.querySelector('#date').value = new Date().toDateString();
