@@ -29,7 +29,6 @@ body {
 ------------------------------ */
 header {
     background-color: var(--primary-color);
-    color: var(--accent1-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -76,7 +75,7 @@ header {
 
 /* Nav Styles */
 nav {
-    background-color: var(--primary-color);
+    background-color: none;
     width: 100%;
 }
 
@@ -91,7 +90,7 @@ nav {
 }
 
 .nav-links.show {
-    max-height: 500px; /* or a value large enough to show all links */
+    max-height: 500px;
 }
 
 .nav-links li {
@@ -318,7 +317,6 @@ footer #copyright {
 
     nav {
         width: auto;
-        background: none;
     }
 
     .nav-links {
