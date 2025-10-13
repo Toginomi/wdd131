@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (!mentorGrid) return;
 
   let mentorsToDisplay = [];
-  const isIndexPage = window.location.pathname.endsWith("index.html") || window.location.pathname.endsWith("/tys/"); ;
+  const isIndexPage = window.location.pathname.endsWith("index.html") || window.location.pathname.endsWith("tys/"); ;
 
   if (isIndexPage) {
     mentorsToDisplay = mentors.filter(m => m.role.toLowerCase().includes("founder"));
