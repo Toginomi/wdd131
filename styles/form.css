@@ -64,7 +64,6 @@ textarea {
 
 .optional {
     font-size: 0.85em;
-    color: #007bff;
 }
 
 select:focus,
@@ -124,7 +123,6 @@ input[type="submit"]:hover {
 
 .optional {
     font-size: 14px;
-    color: #666;
 }
 
 footer {
